@@ -1,0 +1,220 @@
+@import '@/assets/styles/variables.less';
+
+.chat_tool {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0.1rem 0.2rem;
+
+	.chat_tool_item {
+		flex: 1;
+		margin-bottom: 0.05rem;
+		display: flex;
+
+		.leftIcons {
+			flex: 1;
+			display: flex;
+
+			li {
+				margin-right: 0.2rem;
+				cursor: pointer;
+			}
+		}
+
+		.rightIcons {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+
+			li {
+				margin-left: 0.2rem;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.chat_tool_input {
+		flex: 5;
+		background-color: @deeply-border_bg-color;
+
+		/* 下一步建议区域 */
+		.nextStepsBox {
+			background: fade(@deeply-border_bg-color, 90%);
+			border: 1px solid @primary-border_bg-color;
+			border-radius: 8px;
+			padding: 0.24rem 0.28rem;
+			margin-bottom: 0.12rem;
+		}
+
+		.nextStepsHeader {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 0.12rem;
+		}
+
+		.nextStepsTitle {
+			color: fade(@font-color, 80%);
+			font-size: 12px;
+		}
+
+		.nextStepsActions :global(.ant-btn) {
+			color: fade(@font-color, 60%);
+		}
+
+		.nextStepsChips {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		.chip {
+			appearance: none;
+			border: 1px solid fade(@primary-antd-color, 35%);
+			background: fade(@primary-antd-color, 10%);
+			color: @primary-antd-color;
+			padding: 6px 10px;
+			border-radius: 999px;
+			cursor: pointer;
+			font-size: 12px;
+			transition: background 0.15s, border-color 0.15s;
+		}
+
+		.chip:hover {
+			background: fade(@primary-antd-color, 18%);
+			border-color: fade(@primary-antd-color, 55%);
+		}
+
+		textarea {
+			resize: none;
+			width: 100%;
+			height: 100%;
+			background-color: @deeply-border_bg-color;
+		}
+
+		textarea::-webkit-scrollbar {
+			width: 0.05rem;
+		}
+
+		textarea::-webkit-scrollbar-thumb {
+			border-radius: 0.05rem;
+			background-color: @primary-border_bg-color;
+		}
+
+		:global {
+			.ant-spin-nested-loading {
+				width: 100%;
+				height: 100%;
+
+				.ant-spin-container {
+					width: 100%;
+					height: 100%;
+				}
+
+				.ant-spin-container::after {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	.chat_tool_btn {
+		flex: 1.5;
+		margin-top: 0.05rem;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	/* Suggestion box for AI Tab completion */
+	.suggestionBox {
+		position: relative;
+		margin-top: 0.2rem;
+		border: 1px solid @primary-border_bg-color;
+		background: @deeply-border_bg-color;
+		border-radius: 8px;
+		max-height: 180px;
+		overflow: auto;
+		padding: 0.4rem;
+		box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10);
+		width: 100%;
+		animation: fadeIn 0.25s ease;
+		transition: box-shadow 0.2s;
+	}
+
+	.suggestionHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0.2rem;
+	}
+
+	.suggestionTitle {
+		color: fade(@font-color, 80%);
+		font-size: 12px;
+	}
+
+	.closeBtn {
+		appearance: none;
+		border: none;
+		outline: none;
+		background: transparent;
+		color: fade(@font-color, 60%);
+		cursor: pointer;
+		font-size: 16px;
+		line-height: 1;
+		padding: 2px 6px;
+		border-radius: 4px;
+		transition: background 0.15s, color 0.15s;
+	}
+
+	.closeBtn:hover {
+		background: fade(@primary-color, 12%);
+		color: @primary-antd-color;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.suggestionBox ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.suggestionBox li {
+		padding: 8px 12px;
+		border-radius: 4px;
+		cursor: pointer;
+		color: @font-color;
+		font-size: 15px;
+		transition: background 0.15s, color 0.15s;
+	}
+
+	.suggestionBox li:hover {
+		background: fade(@primary-color, 12%);
+		color: @primary-antd-color;
+		font-weight: 500;
+	}
+
+	.selected {
+		background: fade(@primary-antd-color, 18%);
+		color: @primary-antd-color;
+		font-weight: 600;
+		box-shadow: 0 2px 8px 0 fade(@primary-antd-color, 10%);
+	}
+
+	.preview {
+		margin-top: 0.4rem;
+		color: fade(@font-color, 60%);
+		font-size: 12px;
+	}
+}

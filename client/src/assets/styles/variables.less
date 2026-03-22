@@ -1,0 +1,72 @@
+@primary-color: #fff;
+@a-link-color: #576B95; // 链接与轻提示的品牌蓝（接近微信）
+@primary-antd-color: #07C160; // WeChat 品牌绿（AntD 主题色）
+
+@shadow-border_bg-color: #eee; // 组件悬浮/高亮的浅灰
+@primary-border_bg-color: #e5e5e5; // 主要分割线灰
+@deeply-border_bg-color: #f5f5f5; // 页面浅灰背景（聊天区可用）
+
+@item-border-color: #dcdcdc; // 列表项分割线更轻
+@item-hover-bg-color: rgba(0, 0, 0, 0.03); // 列表项悬停轻灰
+@item-selected-bg-color: rgba(0, 0, 0, 0.06); // 列表项选中更轻
+
+// 布局类
+@sider-bg-color: #EDEDED; // 主框架窄侧边栏背景色（仿微信）
+
+// rgba颜色
+@btn-shadow-color: rgba(7, 193, 96, 0.28); // 按钮阴影使用品牌绿
+@bg-filter-color: rgba(255, 255, 255, 0.2); // 登录和注册页页面的毛玻璃效果背景颜色
+@call-modal-bg-color: rgba(0, 0, 0, 0.2); // 音视频通话页面用到的rgba颜色
+@scrollbar-thumb-color: rgba(0, 0, 0, 0.12); // 滚动条的thumb颜色（略深）
+
+// 字体颜色
+@font-color: #111; // 主文案更接近微信视觉
+@font-color-light: #333;
+@font-color-lighter: #666;
+@font-color-lightest: #999;
+
+// 暗色主题变量
+@import './variables-dark.less';
+
+// 主题类
+.light-theme {
+  --primary-color: @primary-color;
+  --a-link-color: @a-link-color;
+  --primary-antd-color: @primary-antd-color;
+  --shadow-border-bg-color: @shadow-border_bg-color;
+  --primary-border-bg-color: @primary-border_bg-color;
+  --deeply-border-bg-color: @deeply-border_bg-color;
+  --item-border-color: @item-border-color;
+  --item-hover-bg-color: @item-hover-bg-color;
+  --item-selected-bg-color: @item-selected-bg-color;
+  --btn-shadow-color: @btn-shadow-color;
+  --bg-filter-color: @bg-filter-color;
+  --call-modal-bg-color: @call-modal-bg-color;
+  --scrollbar-thumb-color: @scrollbar-thumb-color;
+  --font-color: @font-color;
+  --font-color-light: @font-color-light;
+  --font-color-lighter: @font-color-lighter;
+  --font-color-lightest: @font-color-lightest;
+  --sider-bg-color: @sider-bg-color;
+}
+
+.dark-theme {
+  --primary-color: @primary-color-dark;
+  --a-link-color: @a-link-color-dark;
+  --primary-antd-color: @primary-antd-color-dark;
+  --shadow-border-bg-color: @shadow-border_bg-color-dark;
+  --primary-border-bg-color: @primary-border_bg-color-dark;
+  --deeply-border-bg-color: @deeply-border_bg-color-dark;
+  --item-border-color: @item-border-color-dark;
+  --item-hover-bg-color: @item-hover-bg-color-dark;
+  --item-selected-bg-color: @item-selected-bg-color-dark;
+  --btn-shadow-color: @btn-shadow-color-dark;
+  --bg-filter-color: @bg-filter-color-dark;
+  --call-modal-bg-color: @call-modal-bg-color-dark;
+  --scrollbar-thumb-color: @scrollbar-thumb-color-dark;
+  --font-color: @font-color-dark;
+  --font-color-light: @font-color-light-dark;
+  --font-color-lighter: @font-color-lighter-dark;
+  --font-color-lightest: @font-color-lightest-dark;
+  --sider-bg-color: @sider-bg-color-dark;
+}

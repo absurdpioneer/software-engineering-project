@@ -1,0 +1,110 @@
+/* 去除 a 标签文本下划线 */
+a {
+	text-decoration: none;
+}
+
+/* 去除 input、textarea 等文本输入框的默认样式 */
+input,
+textarea {
+	border: none;
+	outline: none;
+}
+
+/* 设置所有元素的 box-sizing 属性为 border-box */
+* {
+	box-sizing: border-box;
+}
+
+/* 将 body、html 元素的高度设置为 100% */
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 100px;
+	/* 使用全局背景图，来自 public 目录，可按需替换（对空格进行 URL 编码） */
+	background: url('/Tomotake%20Yoshino.jpg') center center / cover no-repeat fixed !important;
+	background-color: #f5f5f5 !important;
+	/* 图片加载失败时的兜底色 */
+}
+
+/* 清空 ul、ol 元素的默认样式 */
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/* 清空 h1~h6 标签的默认样式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+/* 将图片设置为响应式 */
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* 取消输入框 placeholder 出现时边框的问题 */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #999;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #999;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #999;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #999;
+}
+
+/* 去除按钮的默认边框 */
+button {
+	border: none;
+	outline: none;
+}
+
+/* 设置全局字体样式 */
+body {
+	font-size: 14px;
+	color: var(--font-color-light);
+}
+
+/* 链接色与悬停状态（更接近微信轻蓝） */
+a {
+	color: var(--a-link-color);
+}
+
+a:hover {
+	text-decoration: none;
+	filter: brightness(0.9);
+}
+
+/* 全局滚动条统一为更轻的灰色拇指 */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-thumb-color);
+	border-radius: 4px;
+}
