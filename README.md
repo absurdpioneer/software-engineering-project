@@ -1,141 +1,262 @@
 # my-pomelo-chat
 
-my-pomelo-chat is a real-time multi-user chat room project developed using Node.js and Socket.io. It supports core instant messaging (IM) features such as user registration and login, real-time messaging, group and friend chat, file uploads, and basic chat room management. This project is ideal for learning, teaching, or quickly building your own chat system.
+my-pomelo-chat is a lightweight real-time chat system built with Node.js and Socket.io. It supports private messaging, group chat, file transfer, and other core IM (Instant Messaging) features. This project is ideal for learning, teaching, or quickly deploying a private chat service.
 
 ---
 
-## Features
+## 📌 Overview
 
-- User registration and login (JWT authentication/session)
-- Real-time message communication (private and group chat)
-- Friend adding and contact management
-- File upload and download (common file types supported)
-- Message history storage (MongoDB/MySQL, selectable)
-- Clean and intuitive front-end interface
-- Mobile responsive support
-- Basic chat room management (e.g., create/disband groups)
+### 🖼 UI Preview
+
+login page：
+
+<img width="633" height="701" alt="Image" src="https://github.com/user-attachments/assets/77af2856-b142-4a2b-ab50-3f13c8088622" />
+
+private chat：
+
+<img width="633" height="701" alt="Image" src="https://github.com/user-attachments/assets/06ff0c54-f686-45b7-9e7c-02b2bfde2297" />
+
+group chat：
+
+<img width="885" height="578" alt="Image" src="https://github.com/user-attachments/assets/81305cca-e065-486a-b0b7-6d0830381e38" />
+
+intelligent chat entity：
+
+<img width="950" height="600" alt="Image" src="https://github.com/user-attachments/assets/e104f786-936f-456e-b52d-1c84a7052583" />
 
 ---
 
-## Tech Stack
+## 🎯 Purpose
+
+### 🚀 Development Methodology
+
+- Development Model: **Agile (Scrum)**
+- Reasons:
+  - Rapid validation of core features (real-time messaging, file upload)
+  - Flexible for solo development + community contributions
+  - Suitable for iterative improvements in learning environments
+  - More adaptable than the waterfall model
+
+---
+
+### 🎯 Target Market
+
+- Core Scenarios:
+  - Programming education / training
+  - Node.js / Socket.io practice
+- Secondary Scenarios:
+  - Small team communication
+  - Temporary chat systems
+
+### 👥 Target Users
+
+- Beginner to intermediate developers
+- Programming educators
+- Small teams
+
+---
+
+## ✨ Features
+
+- ✅ User registration & login (JWT authentication)
+- 💬 Real-time messaging (private & group chat)
+- 👥 Friend management
+- 📁 File upload & download
+- 🗂 Message storage (MongoDB / MySQL)
+- 📱 Mobile responsive design
+- 🏠 Chat room management
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 
 - HTML + CSS + JavaScript
-- Socket.io client (optionally upgradeable to React/Vue frameworks)
-- Axios (for HTTP communication with backend)
-- Modern browser support
+- Socket.io-client
+- Axios
 
 ### Backend
 
 - Node.js + Express
 - Socket.io
-- Database: MongoDB or MySQL (choose one or support both)
-- JWT (jsonwebtoken, for user authentication)
-- Multer (middleware for file uploads)
+- MongoDB / MySQL
+- JSON Web Token (JWT)
+- Multer (file upload)
 
 ---
 
-## Project Structure
+## 🧠 Core Implementation
+
+- **Real-time Communication**
+  - Socket.io publish-subscribe model
+  - Private chat via user ID rooms
+  - Group chat via group ID rooms
+
+- **Authentication**
+  - JWT (HS256)
+  - Token attached to Socket context
+
+- **File Handling**
+  - Multer upload middleware
+  - MD5-based deduplication
+
+- **Data Storage**
+  - Indexed by timestamp + user ID for efficient queries
+
+---
+
+## 📂 Project Structure
 
 ```
 my-pomelo-chat/
-├── src/                 # Backend core code
-│   ├── api/             # RESTful routes
-│   ├── models/          # Database models (user, message, etc.)
-│   ├── socket/          # Socket.io message handling
-│   ├── utils/           # Utility functions
-│   └── index.js         # Service entry point
-├── public/              # Front-end static pages and resources
-│   ├── index.html
-│   └── ...
-├── uploads/             # File upload directory
+├── src/
+│   ├── api/
+│   ├── models/
+│   ├── socket/
+│   ├── utils/
+│   └── index.js
+├── public/
+├── uploads/
 ├── package.json
-├── README.md
-└── ...
+└── README.md
 ```
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/your-github-username/my-pomelo-chat.git
 cd my-pomelo-chat
 ```
 
-### 2. Install dependencies
+### 2️⃣ Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Database configuration
+### 3️⃣ Configure database
 
-- Create a new MongoDB or MySQL instance.
-- Edit `src/config.js` (or `.env`) and fill in the database connection info.
+- Use MongoDB or MySQL
+- Update `.env` or `config.js`
 
-### 4. Start the backend service
+### 4️⃣ Start the server
 
 ```bash
 npm start
-# or
-node src/index.js
 ```
 
-### 5. Access the frontend
+### 5️⃣ Open in browser
 
-Open your browser and navigate to:
-```
 http://localhost:3000
-```
-
-Register and log in to experience real-time chat and all features.
 
 ---
 
-## Main Configuration
+## 🔧 Development Plan
 
-- `src/config.js` or `.env` — database/port/JWT secret, etc.
-- `public/` — Front-end pages and resources
-- `uploads/` — Directory for uploaded files
+Requirements → Prototype → Iteration → Testing → Release → Feedback → Next iteration
 
----
+### 📅 Timeline
 
-## Common Scripts
-
-- `npm start` — Start the backend service
-- `npm run dev` — (If supported) Hot-reload development
-- `npm run lint` — Lint code style (if configured)
-
----
-
-## LAN Testing
-
-On the same Wi-Fi or local network, you can use phone and computer to log in to the same service address for multi-user chat testing.  
-(For public access, you may use tools such as ngrok or cloudflared.)
+| Phase | Time | Description |
+|------|------|-------------|
+| Planning | 2026.01 | Feature definition |
+| V1.0 | 2026.02 | Login + private chat |
+| V2.0 | 2026.03 | Group chat + file upload |
+| Optimization | 2026.03 | Bug fixes |
+| Iteration | 2026.04+ | New features |
 
 ---
 
-## Contribution & Communication
+## 📊 Current Status
 
-Feel free to submit issues or PRs! You can reach me via the [issues](https://github.com/absurdpioneer/my-pomelo-chat/issues) page.
+- ✅ Core features completed
+- ✅ Local deployment supported
+- ⚠ No stress testing yet
 
 ---
 
-## License
+## 🔮 Roadmap
+
+### Short-term
+
+- UI improvements
+- Message recall/edit
+- Logging system
+
+### Mid-term
+
+- React / Vue integration
+- Read/unread status
+- Media support
+
+### Long-term
+
+- Distributed deployment
+- AI chatbot integration
+- Mobile app / mini program
+
+---
+
+## 🎥 Demo Video
+
+https://www.youtube.com/watch?v=wGRbYA840_o
+---
+
+## ⚙️ Requirements
+
+### Minimum Server
+
+| Type | Requirement |
+|------|------------|
+| CPU | 1 core |
+| RAM | 1GB |
+| Disk | 100MB |
+
+---
+
+## 📦 Dependencies
+
+| Package | Purpose |
+|--------|--------|
+| express | Web server |
+| socket.io | Real-time communication |
+| jsonwebtoken | Authentication |
+| multer | File upload |
+| mongoose/mysql2 | Database |
+
+---
+
+## 🌐 LAN Testing
+
+http://YOUR_IP:3000
+
+---
+
+## 🤝 Contribution
+
+https://github.com/absurdpioneer/my-pomelo-chat/issues
+
+---
+
+## 📜 License
 
 MIT License
 
 ---
 
-> This project is inspired by the excellent [better-chat](https://github.com/XC0703/better-chat?tab=readme-ov-file).
->
-> All code is independently implemented and owned by me, for learning and communication purposes only.
+## 📢 Disclaimer
+
+- For learning and educational use only
+- Not intended for direct commercial deployment
 
 ---
 
-**Author:** [absurdpioneer](https://github.com/absurdpioneer)  
+## 👨‍💻 Author
+
+absurdpioneer  
 March 2026
