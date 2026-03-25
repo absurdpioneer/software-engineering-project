@@ -12,21 +12,17 @@ login page：
 
 ![Uploading e962f14747513dbcd4fb9ea3a76b37c2.png…]()
 
-
 private chat：
 
-![Uploading e881c2c1596be8cab72799960b80d2b8.png…]()
-
+<img width="633" height="701" alt="e881c2c1596be8cab72799960b80d2b8" src="https://github.com/user-attachments/assets/3ac23826-2815-4f6e-9fe2-8ed9b3649533" />
 
 group chat：
 
 ![Uploading 6c4c638742f644e6f05220fc1337ff4e.png…]()
 
-
 intelligent chat entity：
 
 ![Uploading 72b22eb4910eed68f68e0da39126c868.png…]()
-
 
 ---
 
