@@ -10,19 +10,23 @@ my-pomelo-chat is a lightweight real-time chat system built with Node.js and Soc
 
 login page：
 
-<img width="633" height="701" alt="Image" src="https://github.com/user-attachments/assets/77af2856-b142-4a2b-ab50-3f13c8088622" />
+![Uploading e962f14747513dbcd4fb9ea3a76b37c2.png…]()
+
 
 private chat：
 
-<img width="633" height="701" alt="Image" src="https://github.com/user-attachments/assets/06ff0c54-f686-45b7-9e7c-02b2bfde2297" />
+![Uploading e881c2c1596be8cab72799960b80d2b8.png…]()
+
 
 group chat：
 
-<img width="885" height="578" alt="Image" src="https://github.com/user-attachments/assets/81305cca-e065-486a-b0b7-6d0830381e38" />
+![Uploading 6c4c638742f644e6f05220fc1337ff4e.png…]()
+
 
 intelligent chat entity：
 
-<img width="950" height="600" alt="Image" src="https://github.com/user-attachments/assets/e104f786-936f-456e-b52d-1c84a7052583" />
+![Uploading 72b22eb4910eed68f68e0da39126c868.png…]()
+
 
 ---
 
